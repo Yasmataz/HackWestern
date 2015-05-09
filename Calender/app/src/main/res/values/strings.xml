@@ -11,10 +11,9 @@
 
     <string name="dayViewActivity">Day</string>
     <string name="monthViewActivity">Month</string>
-    <string name="action_settings">Settings</string>
     <string name="title_activity_day_view">DayViewActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_month">Month</string>
-    
+
 </resources>

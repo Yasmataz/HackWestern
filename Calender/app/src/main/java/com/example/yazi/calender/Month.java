@@ -1,14 +1,12 @@
 package com.example.ziningzhu.hackwestern;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
+
+
+import com.example.yazi.calender.MainActivity;
 
 import java.util.Calendar;
+
 
 
 public class MonthViewActivity extends ActionBarActivity {
@@ -18,7 +16,7 @@ public class MonthViewActivity extends ActionBarActivity {
         // 1 means Sunday.7 means Saturday.
         return (day_of_month % 7 + day_of_week) % 7 + 1;
     }
-    TextView days[];
+    private TextView days[];
     // When put into use, this should be the system time;
     // Since we are only dealing with a demonstrating month,
     // A magic number is plausible here.
@@ -65,10 +63,10 @@ public class MonthViewActivity extends ActionBarActivity {
         for(int i = 0; i < 30; ++i) {
             days[i].setText(String.format("%d", i));
             final int finali = i;
-            days[i].setOnClickListener(new View.OnClickListener() {
+            days[i].setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(MonthViewActivity.this, DayViewActivity.this);
+                    Intent intent = new Intent(MonthActivity.this, MainActivity.this);
                     intent.putExtra("DATE", finali);
                     startActivity(intent);
                     finish();
